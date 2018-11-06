@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'osw/login.css' %}">
+		<title>Her's</title>
+	</head>
+
+	<body>
+		<h1>Her's</h1>
+		<nav class="options">
+			<a href="{% url 'index' %}">Home</a>
+			<a href="{% url 'problem' %}">Report a problem</a>
+			<a href="">Help</a>
+			<a href="">Contact Us</a>
+		</nav>
+		<div class="login">
+			<h3>LOGIN</h3>
+			<form method="POST" action="{% url 'login' %}">
+				{% csrf_token %}
+				<div>
+					<label for="username">username</label>
+					{{f.username}}
+				</div>
+				<div>
+					<label for="password">password</label>
+					{{f.password}}
+				</div>
+				<button id="button" type="submit">Login</button>
+			</form>
+			<h4>not a user?<a href="{% url 'register' %}">Register</a></h4>
+		</div>
+		<footer>
+			<div class="container">
+				<p>Her's, Copyright &copy; 2018</p>
+			</div>
+		</footer>
+	</body>
+</html>

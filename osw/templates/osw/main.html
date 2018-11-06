@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="{% static 'osw/main.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<title>Hers</title>
+	</head>
+	<body>
+		<section id="main">
+			<div class="container">
+					<h1 id="#brand">Her's</h1>
+					<nav class="options">
+						<a href="{% url 'index' %}">Home</a>
+						<a href="{% url 'logout' %}">Sign Out</a>
+						<a href="{% url 'problem' %}">Report a problem</a>
+						<a href="help.html">Help</a>
+						<a href="contact.html">Contact Us</a>
+						<a href="{% url 'payment' %}">Go to Payment</a>
+					</nav>
+					<form method="POST" action={% url 'cart' %}>
+						{% csrf_token %}
+						<div id="button">
+							<button type="submit">Add to Cart</button>
+						</div>
+						{% for item in items %}
+						<div class="item">
+								<img src="{{ item.url }}" alt="{{ item.p_brand}}">
+								
+								<div class="details">
+								<h5>ID: {{  item.id }}</h5>
+			  					<h5>Name: {{  item.p_name }}</h5>
+			  					<h5>Brand: {{  item.p_brand }}</h5>
+			  					<h5>Retail Price: Rs. {{  item.price }}</h5>
+			  					<h5>Discount Price: Rs. {{  item.d_price }}</h5>
+			  					<h5>Type: {{  item.category1 }}</h5>
+			  					<h5>Category: {{  item.category2 }}</h5>
+			  					<h5><label>Add to cart: </label><input type="checkbox" name="items" value="{{ item.id }}"><a id="link" href="#top">Back to top</a></h5>
+			  					</div>
+		  				</div>
+		  				{% endfor %}
+	  				</form>
+	  		</div>
+		</section>
+	</body>
+</html>

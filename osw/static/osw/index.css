@@ -1,0 +1,90 @@
+body
+{
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+
+.container
+{
+	width:100%;
+	margin:auto;
+	overflow:hidden;
+}
+
+h1
+{
+	margin-top:0;
+	margin-bottom:0;
+	font-family: 'Abril Fatface' , cursive;
+	background-color:rgb(40,40,40);
+    color:rgb(255,255,255);
+    padding:15px;
+    font-weight:bold;
+    font-size:30px;
+}
+
+.options
+{
+	background-color:#202020;
+	font-family: Times New Roman;
+	padding-top:10px;
+	padding-bottom:10px;
+
+}
+.options a
+{
+	color:#fff;
+	text-decoration:none;
+	font-size:18px;
+	padding-right:20px;
+	margin:auto;
+}
+
+.options a:hover
+{
+	color:rgb(220,220,220);
+}
+
+.homepicture
+{
+	padding: 0;
+	width:100%;
+	margin: 0 auto;
+	height:1000px;
+	max-height: 100%;
+	max-width: 100%;
+	background-image:url("images/homepic.jpg");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:#202020;
+	background-size: contain;
+}
+
+hr
+{
+	margin-top:15px;
+}
+
+.clothes img
+{
+	width:200px;
+	height:280px;
+	padding-top:20px;
+	font-family: 'Open Sans', sans-serif;
+}
+.clothes a
+{
+	text-decoration:none;
+	font-size:18px;
+	/*padding-right:20px;*/
+	margin:auto;
+	margin-right:20px;
+}
+
+.clothes
+{
+	position: relative;
+	text-align: center;
+	color: white;
+}

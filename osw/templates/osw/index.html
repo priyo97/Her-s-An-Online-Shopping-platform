@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="img/jpg" href="{% static 'osw/images/h.png' %}">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'osw/index.css' %}">
+	
+	<title>Her's</title>
+
+</head>
+
+<body>
+
+	<section class="container">
+		<h1>Her's</h1>
+		
+		<nav class="options">
+		
+			<a href="">Home</a>
+			<!-- <a href="{% url 'register' %}">Register</a> -->
+			<a href="{{ value }}">{{ sign }}</a>
+			<a href="{% url 'problem' %}">Report a problem</a>
+			<a href="help.html">Help</a>
+			<a href="contact.html">Contact Us</a>
+			<a href="{% url 'payment' %}">Go to Payment</a>
+			<a href="/admin">Admin</a>
+		</nav>
+		
+		<div class="homepicture">
+		
+		</div>
+		
+		<hr>
+		
+		<nav class="clothes">
+
+			<a href="/main?c2=19"><img src="{% static 'osw/images/saaree.png' %}" alt="saarees"></a>
+			<a href="/main?c2=22"><img src="{% static 'osw/images/salwar_suit.png' %}"alt="salwar suits"></a>
+			<a href="/main?c2=18"><img src="{% static 'osw/images/lehenga.png' %}" alt="lehengas"></a>
+			<a href="/main?c2=16"><img src="{% static 'osw/images/kurti.png' %}" alt="kurtis"></a>
+
+		</nav>
+		<nav class="clothes">
+
+			<a href="/main?c2=14"><img src="{% static 'osw/images/shirt_top.png' %}" alt="shirts, tops and tunics"></a>
+			<a href="/main?c2=15"><img src="{% static 'osw/images/dress_skirt.png' %}"alt="dresses and skirts"></a>
+			<a href="/main?c2=21"><img src="{% static 'osw/images/jeans_shorts.png' %}" alt="jeans and shorts"></a>
+			<a href="/main?c2=20"><img src="{% static 'osw/images/trousers.jpg' %}" alt="trousers"></a>
+
+		</nav>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>Her's, Copyright &copy; 2018</p>
+		</div>
+	</footer>
+
+</body>
+</html>
